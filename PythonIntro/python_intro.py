@@ -1,8 +1,8 @@
 # python_intro.py
 """Python Essentials: Introduction to Python.
-<Name>
-<Class>
-<Date>
+<Name> Thomas Park
+<Class> MTH420
+<Date> Tuwsday, April 8th, 2025
 """
 
 
