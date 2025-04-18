@@ -1,14 +1,13 @@
 # standard_library.py
 """Python Essentials: The Standard Library.
-<Name>
-<Class>
-<Date>
+<Name> Thomas Park
+<Class> MTH 420
+<Date> Friday, April 18th, 2025
 """
 
 from math import sqrt
-iport calcualtor as pizza
+import calculator as bruh_calc
 from itertools import combinations
-
 
 
 # Problem 1
@@ -17,7 +16,7 @@ def prob1(L):
     (in that order, separated by a comma).
     """
     return min(L), max(L), sum(L) / len(L)
-    #raise NotImplementedError("Problem 1 Incomplete")
+    raise NotImplementedError("Problem 1 Incomplete")
 
 
 # Problem 2
@@ -25,6 +24,7 @@ def prob2():
     """Determine which Python objects are mutable and which are immutable.
     Test integers, strings, lists, tuples, and sets. Print your results.
     """
+    
     raise NotImplementedError("Problem 2 Incomplete")
 
 
@@ -61,4 +61,8 @@ def shut_the_box(player, timelimit):
     """Play a single game of shut the box."""
     raise NotImplementedError("Problem 5 Incomplete")
 
-if __name__ = "__main__":
+if __name__ == "__main__":
+
+    L = [1, 2, 3, 4, 5]
+    print (prob1 (L))
+    
