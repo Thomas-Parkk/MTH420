@@ -6,6 +6,9 @@
 """
 
 from math import sqrt
+iport calcualtor as pizza
+from itertools import combinations
+
 
 
 # Problem 1
@@ -13,7 +16,8 @@ def prob1(L):
     """Return the minimum, maximum, and average of the entries of L
     (in that order, separated by a comma).
     """
-    raise NotImplementedError("Problem 1 Incomplete")
+    return min(L), max(L), sum(L) / len(L)
+    #raise NotImplementedError("Problem 1 Incomplete")
 
 
 # Problem 2
@@ -56,3 +60,5 @@ def power_set(A):
 def shut_the_box(player, timelimit):
     """Play a single game of shut the box."""
     raise NotImplementedError("Problem 5 Incomplete")
+
+if __name__ = "__main__":
