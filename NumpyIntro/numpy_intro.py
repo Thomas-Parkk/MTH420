@@ -1,8 +1,8 @@
 # numpy_intro.py
 """Python Essentials: Intro to NumPy.
-<Name>
-<Class>
-<Date>
+<Name> Thomas Park
+<Class> MTH 420
+<Date> Tuesday, April 22nd, 2025
 """
 
 import numpy as np
