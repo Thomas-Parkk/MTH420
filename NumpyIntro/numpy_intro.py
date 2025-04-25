@@ -10,11 +10,20 @@ import numpy as np
 
 def prob1():
     """ Define the matrices A and B as arrays. Return the matrix product AB. """
+    A = np.array ([[3, -1, 4], [1, 5, -9]])
+    B = np.array ([[2, 6, -5, 3], [5, -8, 9, 7], [9, -3, -2, -3]])
+    return A @ B
+
     raise NotImplementedError("Problem 1 Incomplete")
 
 
 def prob2():
     """ Define the matrix A as an array. Return the matrix -A^3 + 9A^2 - 15A. """
+    A = np.array ([[3, 1, 4], [1, 5, 9], [-5, 3, 1]])
+    A_2 = A @ A
+    A_3 = A @ A @ A
+    return -A_3 + 9 * A_2 - 15 * A
+
     raise NotImplementedError("Problem 2 Incomplete")
 
 
@@ -23,9 +32,15 @@ def prob3():
     this section of the manual (not np.array()). Calculate the matrix product ABA,
     change its data type to np.int64, and return it.
     """
+    A = np.triu(np.ones((7,7)))
+    B_lower = np.tril(np.full((7,7), -1))
+    B_upper = np.triu(np.full((7,7), 5), 1)
+    B = B_lower + B_upper
+    matrix_product = A @ B @ A
+    return print (matrix_product.astype (np.int64))
     raise NotImplementedError("Problem 3 Incomplete")
 
-
+A = np.array([-3,-1,3])
 def prob4(A):
     """ Make a copy of 'A' and use fancy indexing to set all negative entries of
     the copy to 0. Return the resulting array.
@@ -35,6 +50,11 @@ def prob4(A):
         >>> prob4(A)
         array([0, 0, 3])
     """
+   # A = np.array([-3,-1,3])
+    A_copy = np.copy (A)
+    mask = A_copy < 0
+    A_copy [mask] = 0
+    return A_copy
     raise NotImplementedError("Problem 4 Incomplete")
 
 
@@ -64,9 +84,18 @@ def prob6(A):
     raise NotImplementedError("Problem 6 Incomplete")
 
 
-def prob7():
+#def prob7():
     """ Given the array stored in grid.npy, return the greatest product of four
     adjacent numbers in the same direction (up, down, left, right, or
     diagonally) in the grid. Use slicing, as specified in the manual.
     """
-    raise NotImplementedError("Problem 7 Incomplete")
+    #raise NotImplementedError("Problem 7 Incomplete")
+
+if __name__ == "__main__":
+    print (prob1())
+    
+    print (prob2())
+    
+    print (prob3())
+    
+    print (prob4(A))
