@@ -63,3 +63,68 @@ Linter Notes:
 
 -------------------------------------------------------------------------------
 
+04/25/25 21:10
+
+Problem 2 (5 points):
+Score += 5
+
+Problem 3 (5 points):
+Score += 5
+
+Problem 4 (10 points):
+Score += 10
+
+Problem 5 (5 points):
+Score += 5
+
+Problem 6 (5 points):
+Score += 5
+
+Problem 7 (10 points):
+Score += 10
+
+Problem 8 (5 points):
+Score += 5
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 50/50 = 100.0%
+
+Excellent!
+
+Linter Notes: 
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:27:10: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:27:37: E251 unexpected spaces around keyword / parameter equals
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:27:39: E251 unexpected spaces around keyword / parameter equals
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:28:10: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:77:18: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:79:15: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:80:16: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:80:25: E251 unexpected spaces around keyword / parameter equals
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:80:27: E251 unexpected spaces around keyword / parameter equals
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:81:30: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:102:20: E211 whitespace before '['
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:102:32: E211 whitespace before '['
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:112:19: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:112:24: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:113:23: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:113:28: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:115:19: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:115:36: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:115:46: E211 whitespace before '['
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:126:48: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:133:6: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:136:10: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:136:19: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:138:14: E225 missing whitespace around operator
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:140:10: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:141:10: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:143:10: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:146:10: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:148:10: E211 whitespace before '('
+/home/gibsonn/Instructor-Materials/ThomasPark/PythonIntro/python_intro.py:150:10: E211 whitespace before '('
+
+
+-------------------------------------------------------------------------------
+
