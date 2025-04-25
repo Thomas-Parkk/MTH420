@@ -67,6 +67,23 @@ def prob5():
     where I is the 3x3 identity matrix and each 0 is a matrix of all zeros
     of the appropriate size.
     """
+    A = np.array ([[0, 2, 4], [1, 3, 5]])
+    B = np.tril(np.full((3,3), 3))
+    C = np.diag(np.full(3,-2))
+    I = np.diag(np.full(3,1))
+    A_T = np.transpose (A)
+    Zero_1 = np.full((3,3), 0)
+    Zero_2 = np.full((2,2), 0)
+    Zero_3 = np.full((3,2), 0)
+    Zero_3_T = np.transpose (Zero_3)
+    
+    Stack_1 = np.hstack ((Zero_1, A_T, I))
+    Stack_2 = np.hstack ((A, Zero_2, Zero_3_T))
+    Stack_3 = np.hstack ((B, Zero_3, C))
+    
+    Big_Stack = np.vstack ((Stack_1, Stack_2, Stack_3))
+    
+    return Big_Stack
     raise NotImplementedError("Problem 5 Incomplete")
 
 
@@ -99,3 +116,6 @@ if __name__ == "__main__":
     print (prob3())
     
     print (prob4(A))
+    
+    print (prob5 ())
+    
