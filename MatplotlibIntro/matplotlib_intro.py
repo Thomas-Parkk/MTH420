@@ -1,8 +1,8 @@
 # matplotlib_intro.py
 """Python Essentials: Intro to Matplotlib.
-<Name>
-<Class>
-<Date>
+<Name> Thomas Park
+<Class> MTH 420 
+<Date> Friday, May 2nd 2025
 """
 
 import numpy as np
@@ -16,10 +16,15 @@ def var_of_means(n):
 
     Parameters:
         n (int): The number of rows and columns in the matrix.
-
+        
     Returns:
         (float) The variance of the means of each row.
     """
+    A = np.random.normal(size=(n, n)) 
+    
+    mean_row = np.mean (A, axis=1)
+    
+    variance = np.var (mean_row)
     raise NotImplementedError("Problem 1 Incomplete")
 
 def prob1():
@@ -67,7 +72,7 @@ def prob4():
 
 
 # Problem 5
-def prob5():
+#def prob5():
     """ Visualize the data in FARS.npy. Use np.load() to load the data, then
     create a single figure with two subplots:
         1. A scatter plot of longitudes against latitudes. Because of the
@@ -76,7 +81,7 @@ def prob5():
         2. A histogram of the hours of the day, with one bin per hour.
             Label and set the limits of the x-axis.
     """
-    raise NotImplementedError("Problem 5 Incomplete")
+    #raise NotImplementedError("Problem 5 Incomplete")
 
 
 # Problem 6
@@ -91,3 +96,8 @@ def prob6():
         4. Include a color scale bar for each subplot.
     """
     raise NotImplementedError("Problem 6 Incomplete")
+    
+    
+if __name__ == "__main__":
+    
+    var_of_means(2)

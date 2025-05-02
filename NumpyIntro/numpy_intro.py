@@ -98,6 +98,13 @@ def prob6(A):
                [ 0.        ,  1.        ,  0.        ],
                [ 0.33333333,  0.33333333,  0.33333333]])
     """
+    A = np.array([[1,1,0],[0,1,0],[1,1,1]])
+    for row in A
+        row_sum = 0
+        for A in range (0, len(A)):
+            A_copy.append (A / total)
+    return A_copy
+
     raise NotImplementedError("Problem 6 Incomplete")
 
 
@@ -117,5 +124,7 @@ if __name__ == "__main__":
     
     print (prob4(A))
     
-    print (prob5 ())
+    print (prob5())
+    
+    print (prob6(A))
     
