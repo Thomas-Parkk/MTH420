@@ -25,13 +25,27 @@ def var_of_means(n):
     mean_row = np.mean (A, axis=1)
     
     variance = np.var (mean_row)
-    raise NotImplementedError("Problem 1 Incomplete")
+    return variance
+    #raise NotImplementedError("Problem 1 Incomplete")
 
 def prob1():
     """ Create an array of the results of var_of_means() with inputs
     n = 100, 200, ..., 1000. Plot and show the resulting array.
     """
-    raise NotImplementedError("Problem 1 Incomplete")
+    #raise NotImplementedError("Problem 1 Incomplete")
+    array_y = []
+    array_x = []
+    for i in range(100, 1100, 100):
+        # np.append(array_y, var_of_means(i))
+        # np.append (array_x, i)
+        array_y.append(var_of_means(i))
+        array_x.append(i)
+    
+    plt.plot (array_x,array_y)
+    plt.title("Array Plot")
+    plt.xlabel("n Values")
+    plt.ylabel("Variance of Means")
+    plt.show()
 
 
 # Problem 2
@@ -40,8 +54,15 @@ def prob2():
     [-2pi, 2pi]. Make sure the domain is refined enough to produce a figure
     with good resolution.
     """
-    raise NotImplementedError("Problem 2 Incomplete")
-
+    
+    x = np.linspace (-2 * np.pi, 2 * np.pi, 10000)
+    plt.plot(x, np.sin(x), label ="sin(x)")
+    plt.plot(x, np.cos(x), label ="cos(x)")
+    plt.plot(x, np.arctan(x), label ="arctan(x)")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+    
 
 # Problem 3
 def prob3():
@@ -51,7 +72,19 @@ def prob3():
         3. Set the range of the x-axis to [-2,6] and the range of the
            y-axis to [-6,6].
     """
-    raise NotImplementedError("Problem 3 Incomplete")
+    first_x = np.linspace (-2, 0.9999, 400)
+    second_x = np.linspace (1.0001, 6, 400)
+    
+    plt.plot (first_x, 1/ (first_x - 1), 'm--', lw=3, label ="f(x) = 1/(x-1)")
+    plt.plot (second_x,1/ (second_x - 1), 'm--', lw=3)
+    
+    plt.xlim (-2,6)
+    plt.ylim (-6,6)
+    plt.title ("Plot of f(x) = 1/(x-1) on the Domain [-2,6]")
+    plt.xlabel ("x")
+    plt.ylabel ("f(x)")
+    plt.show ()
+    #raise NotImplementedError("Problem 3 Incomplete")
 
 
 # Problem 4
@@ -68,7 +101,8 @@ def prob4():
              2sin(x): blue dashed line.
             2sin(2x): magenta dotted line.
     """
-    raise NotImplementedError("Problem 4 Incomplete")
+    
+    #raise NotImplementedError("Problem 4 Incomplete")
 
 
 # Problem 5
@@ -100,4 +134,6 @@ def prob6():
     
 if __name__ == "__main__":
     
-    var_of_means(2)
+    prob2()
+    prob3 ()
+    prob4()
