@@ -1,8 +1,8 @@
 # cvxpy_intro.py
 """Volume 2: Intro to CVXPY.
-<Name>
-<Class>
-<Date>
+<Name> Thomas Park
+<Class> MTH 420
+<Date> Sunday, June 16th 2025
 """
 
 import numpy as np
@@ -23,7 +23,20 @@ def prob1():
         The optimizer x (ndarray)
         The optimal value (float)
     """
-    raise NotImplementedError("Problem 1 Incomplete")
+    x_con = cp.Variable (3, nonneg = True)
+    cost = np.array ([2, 1, 3])
+    objective = cp.Minimize (cost.T @ x_con)
+
+
+    constraints = [x_con[0] + 2 * x_con[1] <= 3, 
+                   x_con[1] - 4 * x_con[2] <= 1,
+                   2 * x_con[0] + 10 * x_con[1] + 3 * x_con[2] >= 12]
+    goal = cp.Problem (objective, constraints)
+    optimal_value_y = problem.solve()
+    
+    return x_con.value, optimal_value_y
+
+    # raise NotImplementedError("Problem 1 Incomplete")
 
 
 # Problem 2
@@ -41,7 +54,16 @@ def l1Min(A, b):
         The optimizer x (ndarray)
         The optimal value (float)
     """
-    raise NotImplementedError("Problem 2 Incomplete")
+    m, n = A. shape
+    x_variable = cp.Variable (n)
+    objective = cp.Minimize (cp.norm (x_variable,1) )
+    constraint = [A @ x_variable == b]
+    
+    goal = cp.Problem (objective, constraint)
+    optimal_value_y = problem.solve()
+    
+    return x_variable.value, optimal_value_y
+    # raise NotImplementedError("Problem 2 Incomplete")
 
 
 # Problem 3
@@ -53,7 +75,19 @@ def prob3():
         The optimizer x (ndarray)
         The optimal value (float)
     """
-    raise NotImplementedError("Problem 3 Incomplete")
+    x_variable = cp.Variable (6, nonneg = True)
+    cost = np.array ([4, 7, 6, 8, 8, 9])
+    objective = cp.Minimize (cost.T @ x_variable)
+    constraints = [x_variable[0] + x_variable[1] <= 7, 
+                   x_variable[2] + x_variable[3] <= 2, 
+                   x_variable[4] + x_variable[5] <= 4, 
+                   x_variable[0] + x_variable[2] + x_variable[4] == 5,
+                   x_variable[1] + x_variable[3] + x_variable[5] == 8]
+    goal = cp.Problem (objective, constraints)
+    optimal_value_y = problem.solve()
+    
+    return x_variable.value, optimal_value_y   
+    #raise NotImplementedError("Problem 3 Incomplete")
 
 
 # Problem 4
@@ -66,6 +100,8 @@ def prob4():
         The optimizer x (ndarray)
         The optimal value (float)
     """
+    
+    
     raise NotImplementedError("Problem 4 Incomplete")
 
 
@@ -99,3 +135,9 @@ def prob6():
         The optimal value (float)
     """	 
     raise NotImplementedError("Problem 6 Incomplete")
+    
+if __name__ == "__main__":
+    prob1 ()
+    prob3 ()
+    
+    
