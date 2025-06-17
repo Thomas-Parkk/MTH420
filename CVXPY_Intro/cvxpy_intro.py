@@ -23,15 +23,15 @@ def prob1():
         The optimizer x (ndarray)
         The optimal value (float)
     """
-    x_con = cp.Variable (3, nonneg = True)
-    cost = np.array ([2, 1, 3])
-    objective = cp.Minimize (cost.T @ x_con)
+    x_con = cp.Variable(3, nonneg = True)
+    cost = np.array([2, 1, 3])
+    objective = cp.Minimize(cost.T @ x_con)
 
 
     constraints = [x_con[0] + 2 * x_con[1] <= 3, 
                    x_con[1] - 4 * x_con[2] <= 1,
                    2 * x_con[0] + 10 * x_con[1] + 3 * x_con[2] >= 12]
-    goal = cp.Problem (objective, constraints)
+    problem = cp.Problem(objective, constraints)
     optimal_value_y = problem.solve()
     
     return x_con.value, optimal_value_y
@@ -59,7 +59,7 @@ def l1Min(A, b):
     objective = cp.Minimize (cp.norm (x_variable,1) )
     constraint = [A @ x_variable == b]
     
-    goal = cp.Problem (objective, constraint)
+    problem = cp.Problem (objective, constraint)
     optimal_value_y = problem.solve()
     
     return x_variable.value, optimal_value_y
@@ -83,7 +83,7 @@ def prob3():
                    x_variable[4] + x_variable[5] <= 4, 
                    x_variable[0] + x_variable[2] + x_variable[4] == 5,
                    x_variable[1] + x_variable[3] + x_variable[5] == 8]
-    goal = cp.Problem (objective, constraints)
+    problem = cp.Problem (objective, constraints)
     optimal_value_y = problem.solve()
     
     return x_variable.value, optimal_value_y   
